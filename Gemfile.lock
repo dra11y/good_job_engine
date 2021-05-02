@@ -11,9 +11,9 @@ GIT
 PATH
   remote: .
   specs:
-    good_job_engine (0.1.0)
+    good_job_engine (1.9.1)
       activerecord (>= 5.2.0)
-      good_job (>= 0.1.0)
+      good_job (>= 1.9.1)
       railties (>= 5.2.0)
 
 GEM

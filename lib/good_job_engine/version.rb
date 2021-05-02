@@ -1,3 +1,3 @@
 module GoodJobEngine
-  VERSION = "0.1.0"
+  VERSION = '1.9.1'
 end
