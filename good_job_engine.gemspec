@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.homepage    = "https://github.com/tgrushka/good_job_engine"
   spec.metadata = {
     "bug_tracker_uri"   => "https://github.com/tgrushka/good_job_engine/issues",
-    "changelog_uri"     => "https://github.com/tgrushka/good_job_engine/blob/master/CHANGELOG.md",
+    "changelog_uri"     => "https://github.com/tgrushka/good_job_engine/blob/main/CHANGELOG.md",
     "documentation_uri" => "https://rdoc.info/github/bensheldon/good_job",
     "homepage_uri"      => spec.homepage,
     "source_code_uri"   => "https://github.com/tgrushka/good_job_engine",
@@ -37,7 +37,7 @@ Gem::Specification.new do |spec|
 
   spec.extra_rdoc_files = Dir["README.md", "CHANGELOG.md", "LICENSE.txt"]
   spec.rdoc_options += [
-    "--title", "GoodJobEngine - a dashboard Rails Engine for GoodJob, extracted as a separate gem",
+    "--title", "GoodJobEngine: a dashboard Rails Engine for GoodJob",
     "--main", "README.md",
     "--line-numbers",
     "--inline-source",
