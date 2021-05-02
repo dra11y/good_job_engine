@@ -1,6 +1,6 @@
 require_relative 'lib/good_job_engine/version'
 
-require_paths = ['engine/lib']
+require_paths = ["lib", "engine/lib"]
 require_paths.each do |require_path|
   $LOAD_PATH.push File.expand_path(require_path, __dir__)
 end
