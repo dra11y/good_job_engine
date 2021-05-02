@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Good Job Dashboard</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <style>
+    <%== render file: GoodJob::Engine.root.join("app", "assets", "vendor", "bootstrap", "bootstrap.css") %>
+    <%== render file: GoodJob::Engine.root.join("app", "assets", "vendor", "chartist", "chartist.css") %>
+    <%== render file: GoodJob::Engine.root.join("app", "assets", "style.css") %>
+  </style>
+
+  <script>
+    <%== render file: GoodJob::Engine.root.join("app", "assets", "vendor", "bootstrap", "bootstrap-native.js") %>
+    <%== render file: GoodJob::Engine.root.join("app", "assets", "vendor", "chartist", "chartist.js") %>
+  </script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <%= link_to "GoodJob 👍", root_path, class: 'navbar-brand mb-0 h1' %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <%= link_to root_path, class: ["nav-link", ("active" if current_page?(root_path))] do %>
+              All jobs <span class="badge badge-secondary">More views coming soon</span>
+            <% end %>
+          </li>
+
+          <!-- Coming Soon
+            <li class="nav-item">
+              <%= link_to "Upcoming Jobs", 'todo', class: ["nav-link", ("active" if current_page?('todo'))] %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Finished Jobs", 'todo', class: ["nav-link", ("active" if current_page?('todo'))] %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Errored Jobs", 'todo', class: ["nav-link", ("active" if current_page?('todo'))] %>
+            </li>
+          -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="card border-warning text-dark my-3">
+      <div class="card-body">
+        <p class="card-text">🚧 GoodJob's dashboard is a work in progress. Please contribute ideas and code on <a href="https://github.com/bensheldon/good_job/issues" target="_blank" rel="nofollow noopener noreferrer">Github</a>.</p>
+      </div>
+    </div>
+
+    <%= yield %>
+  </div>
+</body>
+</html>
