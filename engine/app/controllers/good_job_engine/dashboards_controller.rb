@@ -1,5 +1,5 @@
-module GoodJob
-  class DashboardsController < GoodJob::BaseController
+module GoodJobEngine
+  class DashboardsController < GoodJobEngine::BaseController
     class JobFilter
       attr_accessor :params
 

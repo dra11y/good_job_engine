@@ -1,9 +1,9 @@
-require_relative 'lib/good_job_engine/version'
-
 require_paths = ["lib", "engine/lib"]
 require_paths.each do |require_path|
   $LOAD_PATH.push File.expand_path(require_path, __dir__)
 end
+
+require 'good_job_engine/version'
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
