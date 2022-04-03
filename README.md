@@ -6,6 +6,10 @@ It is intended to be a drop-in replacement for the built-in engine so that the a
 
 The GoodJobEngine version is intended to mirror the current GoodJob release version it is compatible with.
 
+## Changes
+
+- April 3, 2022: Pull in code from good_job/engine 2.11.3 and make work with ActiveRecord::Encryption by casting `serialized_params` to `jsonb` in `BaseFilter` query.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -97,4 +101,3 @@ $ bundle exec appraisal bin/rspec
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/tgrushka/good_job_engine.
-
