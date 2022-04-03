@@ -1,0 +1,23 @@
+<div class="my-3 flex">
+  <h2>All Jobs</h2>
+</div>
+
+<div class="card my-3 p-6" data-gj-poll-replace id="jobs-chart">
+  <%= render 'good_job_engine/shared/chart', chart_data: GoodJobEngine::ScheduledByQueueChart.new(@filter).data %>
+</div>
+
+<%= render 'good_job_engine/shared/filter', filter: @filter %>
+
+<%= render 'good_job_engine/jobs/table', jobs: @filter.records %>
+
+<% if @filter.records.present? %>
+  <nav aria-label="Job pagination" class="mt-3" data-gj-poll-replace id="jobs-pagination">
+    <ul class="pagination">
+      <li class="page-item">
+        <%= link_to(@filter.to_params(after_scheduled_at: (@filter.last.scheduled_at || @filter.last.created_at), after_id: @filter.last.id), class: "page-link") do %>
+          Older jobs <span aria-hidden="true">&raquo;</span>
+        <% end %>
+      </li>
+    </ul>
+  </nav>
+<% end %>

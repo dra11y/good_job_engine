@@ -14,3 +14,17 @@
 .tooltip.tooltip-hidden {
   opacity: 0;
 }
+
+.ct-label.ct-horizontal {
+  white-space: nowrap;
+}
+
+.chart-wrapper {
+  position: relative;
+  height: 200px;
+}
+
+body {
+  /* Make room for the sticky footer */
+  margin-bottom: 100px;
+}
